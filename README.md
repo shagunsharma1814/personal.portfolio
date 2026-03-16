@@ -139,3 +139,73 @@ View Profile
 
 </body>
 </html># personal.portfolio
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f1d2ed;
+
+
+header{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav a{
+color:pink;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:40px;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.card{
+background:rgb(252, 249, 249);
+padding:20px;
+margin:15px auto;
+width:80%;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+ul{
+list-style:none;
+text-align:center;
+}
+
+ul li{
+display:inline-block;
+background:#f1d1f1;
+color:white;
+padding:10px 15px;
+margin:5px;
+border-radius:5px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:10px;
+}
+// Simple smooth scroll effect
+
+document.querySelectorAll('nav a').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior: 'smooth'
+});
+
+});
+});
